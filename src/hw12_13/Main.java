@@ -12,10 +12,12 @@ public class Main {
         System.out.println(gogol.toString());
         System.out.println(mumu.toString());
         if (turgenev.equals(ivanov)) {
-            System.out.println("Equals");
+            System.out.println(turgenev.hashCode() + " & " + ivanov.hashCode());
         } else {
             System.out.println("False");
         }
+
     }
+
 }
 

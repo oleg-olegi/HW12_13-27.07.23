@@ -30,10 +30,10 @@ public class Author {
 
     }
 
-   /* @Override
+    @Override
     public int hashCode() {
-        return Author.hash(name,surname);
-    }*/
+        return name.hashCode() + surname.hashCode();
+    }
 
     @Override
     public String toString() { //переопределение toSring

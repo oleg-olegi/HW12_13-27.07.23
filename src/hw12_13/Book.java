@@ -37,6 +37,11 @@ public class Book {
     }
 
     @Override
+    public int hashCode() {
+        return title.hashCode() + authorName.hashCode();
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;
