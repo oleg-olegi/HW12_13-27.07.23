@@ -17,7 +17,7 @@ public class Author {
         return this.surname;
     }
 
-    public String getAuthor() { //
-        return this.name + " " + this.surname;
+    public String toString() { //переопределение toSring
+        return "Имя автора - " + this.name + " " + "\nФамилия автора - " + this.surname;
     }
 }

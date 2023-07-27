@@ -31,7 +31,13 @@ public class Book {
 
     public void printBook() {
         System.out.println("Назание " + title);
-        System.out.println("Автор " + authorName.getAuthor());
+        System.out.println(authorName.toString());
         System.out.println("Год публикации " + dateOfPublishing);
+    }
+
+    public String toString() {
+        return "Навание книги - " + this.title + ";\n" +
+                this.authorName.toString() + ";\n" +
+                "Год публикации " + this.dateOfPublishing + ";\n";
     }
 }
