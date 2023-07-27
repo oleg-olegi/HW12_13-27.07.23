@@ -29,15 +29,22 @@ public class Book {
         this.dateOfPublishing = year;
     }
 
-    public void printBook() {
-        System.out.println("Назание " + title);
-        System.out.println(authorName.toString());
-        System.out.println("Год публикации " + dateOfPublishing);
-    }
-
+    @Override
     public String toString() {
         return "Навание книги - " + this.title + ";\n" +
                 this.authorName.toString() + ";\n" +
                 "Год публикации " + this.dateOfPublishing + ";\n";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Book a = (Book) obj;
+        return title.equals(a.title) && authorName.equals(a.authorName) && dateOfPublishing == a.dateOfPublishing;
     }
 }

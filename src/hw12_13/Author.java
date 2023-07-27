@@ -17,6 +17,25 @@ public class Author {
         return this.surname;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Author a = (Author) obj;
+        return name.equals(a.name) && surname.equals(a.surname);
+
+    }
+
+   /* @Override
+    public int hashCode() {
+        return Author.hash(name,surname);
+    }*/
+
+    @Override
     public String toString() { //переопределение toSring
         return "Имя автора - " + this.name + " " + "\nФамилия автора - " + this.surname;
     }
