@@ -1,5 +1,7 @@
 package hw12_13;
 
+import java.util.Objects;
+
 public class Author {
     private String name;
     private String surname;
@@ -32,7 +34,7 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return name.hashCode() + surname.hashCode();
+        return Objects.hash(name, surname);
     }
 
     @Override

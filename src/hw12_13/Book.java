@@ -1,5 +1,7 @@
 package hw12_13;
 
+import java.util.Objects;
+
 public class Book {
     private String title;
     private Author authorName;
@@ -38,7 +40,7 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return title.hashCode() + authorName.hashCode();
+        return Objects.hash(title, authorName, dateOfPublishing);
     }
 
     @Override
